@@ -72,7 +72,7 @@ export default function ExperiencesFormations() {
                 {/* Image */}
                 <div className="md:w-1/3 h-40 md:h-auto overflow-hidden">
                   <img
-                    src={item.image}
+                    src={`${import.meta.env.BASE_URL}${item.image}`}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110 h-[200px]"
                   />

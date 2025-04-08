@@ -4,7 +4,7 @@ export const formations = [
     school: "École Supérieure du Numérique 89",
     location: "Ferrières-en-Brie",
     period: "2023 - Informatique",
-    image: "/clement-portfolio/images/89.png",
+    image: "images/89.png",
     tags: ["Programmation", "Web", "Algorithmie", "Base de données", "Gestion de projet"]
   },
   {
@@ -12,7 +12,7 @@ export const formations = [
     school: "Lycée Blaise Pascal",
     location: "Brie-Comte-Robert",
     period: "2021 - 2023",
-    image: "/clement-portfolio/images/blaise-pascal.jpg",
+    image: "images/blaise-pascal.jpg",
     tags: ["Mathématiques", "Physique", "Sciences de l'Ingénieur"]
   }
 ];

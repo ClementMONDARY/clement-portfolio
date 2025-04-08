@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nemeco.github.io/clement-portfolio",
+  "homepage": "https://ClementMONDARY.github.io/clement-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

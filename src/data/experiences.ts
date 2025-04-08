@@ -4,7 +4,7 @@ export const experiences = [
     company: "Les Films de la Tomate",
     location: "Chevry-Cossigny 77173",
     period: "2020",
-    image: "/clement-portfolio/images/lfdlt.jpg",
+    image: "images/lfdlt.jpg",
     tags: ["Adobe Premiere Pro", "Adobe After Effects"]
   },
   {
@@ -12,7 +12,7 @@ export const experiences = [
     company: "THOM Group",
     location: "Paris 75008",
     period: "Mai 2024 - Juillet 2024",
-    image: "/clement-portfolio/images/bureaux.jpg",
+    image: "images/bureaux.jpg",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "Magento 2", "Jira", "Agile", "Figma"]
   }
 ];
