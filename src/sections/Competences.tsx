@@ -26,7 +26,7 @@ export default function Competences() {
           >
             <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center">
               <img 
-              src={`images/softwares/${skill.toUpperCase()}.png`}
+              src={`/clement-portfolio/images/softwares/${skill.toUpperCase()}.png`}
               alt={`${skill} logo`}
               className="w-12 h-12 object-contain"
               />
