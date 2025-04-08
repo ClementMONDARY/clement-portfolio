@@ -48,7 +48,7 @@ export default function Presentation() {
           <div className="absolute inset-0 bg-gradient-to-b from-indigo-500 to-pink-500 rounded-t-full rounded-b-2xl opacity-20 transform rotate-3" />
           <div className="relative w-full h-full rounded-t-full rounded-b-2xl overflow-hidden shadow-2xl">
             <img 
-              src={`${import.meta.env.BASE_URL}images/MONDARYClement.png`}
+              src={`${import.meta.env.BASE_URL}/images/MONDARYClement.png`}
               alt="Photo de profil"
               className="w-full h-full object-cover"
             />
