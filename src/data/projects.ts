@@ -21,6 +21,6 @@ export const projects = [
     image: "runner.png",
     tags: ["Godot", "GDScript", "2D"],
     github: "https://github.com/",
-    exec: "public/exec/runner.exe"
+    exec: "runner.exe"
   }
 ];

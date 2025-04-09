@@ -58,7 +58,7 @@ export default function Projets() {
                       </motion.a>
                       {project.exec ? (
                         <motion.a
-                          href={project.exec}
+                          href={`${import.meta.env.BASE_URL}/exec/${project.exec}`}
                           download
                           className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
                           whileHover={{ scale: 1.05 }}
