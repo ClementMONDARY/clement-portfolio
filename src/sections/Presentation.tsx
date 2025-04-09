@@ -56,7 +56,7 @@ export default function Presentation() {
         </div>
 
         <motion.a
-          href="/docs/Dev - CV CM 2025.pdf"
+          href={`${import.meta.env.BASE_URL}/docs/Dev - CV CM 2025.pdf`}
           download
           className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-medium shadow-lg hover:bg-blue-700 transition-colors mb-8"
           whileHover={{ scale: 1.05 }}
