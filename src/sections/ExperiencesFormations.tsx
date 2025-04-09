@@ -8,7 +8,7 @@ export default function ExperiencesFormations() {
   const [showExperiences, setShowExperiences] = useState(true);
 
   return (
-    <section id="experiences" className="min-h-screen bg-gray-100 dark:bg-gray-800 py-20 px-8">
+    <section id="experiences" className="min-h-screen bg-gray-800 py-20 px-8">
       <motion.div
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0 }}
@@ -17,18 +17,18 @@ export default function ExperiencesFormations() {
         viewport={{ once: true }}
       >
         <div className="flex flex-col items-center mb-12">
-          <h2 className="text-3xl font-bold mb-8 text-center dark:text-white">
+          <h2 className="text-3xl font-bold mb-8 text-center text-white">
             {showExperiences ? "Mes Expériences" : "Mes Formations"}
           </h2>
 
           {/* Toggle Switch */}
-          <div className="flex items-center gap-4 p-2 bg-white dark:bg-gray-700 rounded-full shadow-lg">
+          <div className="flex items-center gap-4 p-2 bg-gray-700 rounded-full shadow-lg">
             <motion.button
               onClick={() => setShowExperiences(true)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full transition-colors ${
                 showExperiences
                   ? 'bg-blue-500 text-white'
-                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600'
+                  : 'text-gray-300 hover:bg-gray-600'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -41,7 +41,7 @@ export default function ExperiencesFormations() {
               className={`flex items-center gap-2 px-6 py-3 rounded-full transition-colors ${
                 !showExperiences
                   ? 'bg-blue-500 text-white'
-                  : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600'
+                  : 'text-gray-300 hover:bg-gray-600'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -61,7 +61,7 @@ export default function ExperiencesFormations() {
           {(showExperiences ? experiences : formations).map((item, index) => (
             <motion.div
               key={index}
-              className="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg h-[200px]"
+              className="bg-gray-700 rounded-xl overflow-hidden shadow-lg h-[200px]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -80,18 +80,18 @@ export default function ExperiencesFormations() {
 
                 {/* Content */}
                 <div className="p-6 md:w-2/3">
-                  <h3 className="text-xl font-bold mb-2 dark:text-white">{item.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-1">
+                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
+                  <p className="text-gray-300 mb-1">
                     {showExperiences ? item.company : item.school}
                   </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">{item.period}</p>
+                  <p className="text-sm text-gray-400">{item.period}</p>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mt-4">
                     {item.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm font-medium"
+                        className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium"
                       >
                         {tag}
                       </span>

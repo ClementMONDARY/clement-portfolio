@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <motion.nav 
-      className="fixed left-4 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-4 rounded-2xl shadow-lg border border-gray-600 z-50"
+      className="fixed left-4 top-1/2 -translate-y-1/2 bg-gray-800/90 backdrop-blur-sm p-4 rounded-2xl shadow-lg border border-gray-600 z-50"
       initial={{ x: -100 }}
       animate={{ x: 0 }}
       transition={{ duration: 0.5 }}
@@ -27,7 +27,7 @@ export default function Navbar() {
           >
             <a
               href={item.href}
-              className="flex flex-col items-center gap-1 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              className="flex flex-col items-center gap-1 text-gray-300 hover:text-blue-400 transition-colors"
             >
               <item.icon className="w-6 h-6" />
               <span className="text-xs font-medium">{item.label}</span>

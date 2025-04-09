@@ -12,12 +12,12 @@ export default function Competences() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-12 text-center dark:text-white">Mes Compétences</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center text-white">Mes Compétences</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
           <motion.div
             key={skill}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center"
+            className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -32,7 +32,7 @@ export default function Competences() {
               className="w-12 h-12 object-contain"
               />
             </div>
-            <h3 className="font-semibold dark:text-white">{skill}</h3>
+            <h3 className="font-semibold text-white">{skill}</h3>
           </motion.div>
         ))}
           </div>

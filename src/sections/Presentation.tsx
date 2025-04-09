@@ -7,7 +7,7 @@ export default function Presentation() {
 
   return (
     <section id="presentation" className="min-h-screen flex items-center justify-center p-8 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950 dark:via-indigo-950 dark:to-purple-950 opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-indigo-950 to-purple-950 opacity-50" />
       
       <motion.div 
         className="max-w-6xl mx-auto relative flex flex-col items-center px-4"
@@ -20,7 +20,7 @@ export default function Presentation() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-2xl text-gray-600 dark:text-gray-300 mb-4 font-light"
+          className="text-2xl text-gray-300 mb-4 font-light"
         >
           Hello, moi c'est
         </motion.p>
@@ -29,7 +29,7 @@ export default function Presentation() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-5xl md:text-6xl font-bold mb-4 text-gray-900 dark:text-white text-center"
+          className="text-5xl md:text-6xl font-bold mb-4 text-white text-center"
         >
           Clément MONDARY
         </motion.h1>
@@ -38,7 +38,7 @@ export default function Presentation() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-3xl text-blue-600 dark:text-blue-400 mb-8 font-medium text-center"
+          className="text-3xl text-blue-400 mb-8 font-medium text-center"
         >
           Développeur Web
         </motion.p>
@@ -78,9 +78,9 @@ export default function Presentation() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
+            className="p-4 bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
           >
-            <Github className="w-6 h-6 dark:text-white" />
+            <Github className="w-6 h-6 text-white" />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/clement-mondary"
@@ -88,17 +88,17 @@ export default function Presentation() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
+            className="p-4 bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
           >
-            <Linkedin className="w-6 h-6 dark:text-white" />
+            <Linkedin className="w-6 h-6 text-white" />
           </motion.a>
           <motion.a
             href="clement.mondary@edu.ecole-89.com"
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
+            className="p-4 bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
           >
-            <Mail className="w-6 h-6 dark:text-white" />
+            <Mail className="w-6 h-6 text-white" />
           </motion.a>
         </motion.div>
       </motion.div>
