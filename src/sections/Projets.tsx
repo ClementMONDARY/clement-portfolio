@@ -27,7 +27,7 @@ export default function Projets() {
                 <div className="md:flex">
                   <div className="md:w-2/5 h-64 md:h-auto overflow-hidden">
                     <img
-                      src={`${import.meta.env.BASE_URL}${project.image}`}
+                      src={`${import.meta.env.BASE_URL}/assets/images/projets/${project.image}`}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                     />

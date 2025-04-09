@@ -18,7 +18,7 @@ export const projects = [
   {
     title: "Jeu Vidéo 2D",
     description: "Un jeu de plateforme développé avec Godot Engine, offrant une expérience immersive avec des graphismes soignés et une jouabilité fluide. Le jeu intègre des mécaniques innovantes et des niveaux créatifs.",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop",
+    image: "runner.png",
     tags: ["Godot", "GDScript", "2D"],
     github: "https://github.com/",
     exec: "public/exec/runner.exe"
