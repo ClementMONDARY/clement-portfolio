@@ -92,14 +92,14 @@ export default function Presentation() {
           >
             <Linkedin className="w-6 h-6 text-white" />
           </motion.a>
-          <motion.a
-            href="clement.mondary@edu.ecole-89.com"
+            <motion.a
+            href="mailto:clement.mondary@edu.ecole-89.com"
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.95 }}
             className="p-4 bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
-          >
+            >
             <Mail className="w-6 h-6 text-white" />
-          </motion.a>
+            </motion.a>
         </motion.div>
       </motion.div>
     </section>
