@@ -41,13 +41,11 @@ export default function Parcours() {
               <div
                 className={`absolute inset-y-0 ${index % 2 === 0 ? 'right-0 w-1/2' : 'left-0 w-1/2'}
                 ${index % 2 === 0 ? 'bg-gradient-to-r' : 'bg-gradient-to-l'}
-                ${index % 2 === 0 ? 'rounded-r-md' : 'rounded-l-md'}
                 from-blue-500 to-purple-500 opacity-20 transform -rotate-2 shadow-2xl`}
               />
               <div
                 className={`absolute inset-y-0 ${index % 2 === 0 ? 'right-0 w-1/2' : 'left-0 w-1/2'}
                 ${index % 2 === 0 ? 'bg-gradient-to-r' : 'bg-gradient-to-l'}
-                ${index % 2 === 0 ? 'rounded-r-md' : 'rounded-l-md'} 
                 from-indigo-500 to-pink-500 opacity-20 transform rotate-2 shadow-2xl`}
               />
               </motion.div>

@@ -8,7 +8,7 @@ export default function ExperiencesFormations() {
   const [showExperiences, setShowExperiences] = useState(true);
 
   return (
-    <section id="experiences" className="min-h-screen bg-gray-800 py-20 px-8">
+    <section id="experiences" className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-br from-blue-950/50 via-indigo-950/50 to-purple-950/50 border-t border-gray-700/50">
       <motion.div
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0 }}
@@ -61,43 +61,51 @@ export default function ExperiencesFormations() {
           {(showExperiences ? experiences : formations).map((item, index) => (
             <motion.div
               key={index}
-              className="bg-gray-700 rounded-xl overflow-hidden shadow-lg h-[200px]"
+              className="rounded-x1 relative absolute h-[200px]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className="md:flex h-full">
-                {/* Image */}
-                <div className="md:w-1/3 h-40 md:h-auto overflow-hidden">
-                  <img
-                    src={`${import.meta.env.BASE_URL}/assets/images/${item.image}`}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-110 h-[200px]"
-                  />
-                </div>
+              <div
+              className={`absolute inset-y-0 w-full ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'}
+              from-blue-500 to-purple-500 opacity-20 transform -rotate-1 shadow-2xl`}
+              />
+              <div
+              className={`absolute inset-y-0 w-full ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'}
+              from-indigo-500 to-pink-500 opacity-20 transform rotate-1 shadow-2xl`}
+              />
+              <div className="md:flex h-full relative z-10">
+              {/* Image */}
+              <div className="md:w-1/3 h-40 md:h-auto overflow-hidden">
+                <img
+                src={`${import.meta.env.BASE_URL}/assets/images/${item.image}`}
+                alt={item.title}
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110 h-[200px]"
+                />
+              </div>
 
-                {/* Content */}
-                <div className="p-6 md:w-2/3">
-                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                  <p className="text-gray-300 mb-1">
-                    {showExperiences ? item.company : item.school}
-                  </p>
-                  <p className="text-sm text-gray-400">{item.period}</p>
+              {/* Content */}
+              <div className="p-6 md:w-2/3">
+                <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
+                <p className="text-gray-300 mb-1">
+                {showExperiences ? item.company : item.school}
+                </p>
+                <p className="text-sm text-gray-400">{item.period}</p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {item.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                {item.tags.map((tag, tagIndex) => (
+                  <span
+                  key={tagIndex}
+                  className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium border border-white/30 shadow-md"
+                  >
+                  {tag}
+                  </span>
+                ))}
                 </div>
+              </div>
               </div>
             </motion.div>
           ))}
