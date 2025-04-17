@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { User, GraduationCap, Briefcase, Code, FolderKanban} from 'lucide-react';
+import { User, GraduationCap, Briefcase, Code, FolderKanban } from 'lucide-react';
 
 const navItems = [
   { icon: User, label: 'Présentation', href: '#presentation' },
@@ -10,31 +10,35 @@ const navItems = [
 ];
 
 export default function Navbar() {
-
   return (
-    <motion.nav 
-      className="fixed left-4 top-1/2 -translate-y-1/2 bg-gray-800/90 backdrop-blur-sm p-4 rounded-2xl shadow-lg border border-gray-600 z-50"
-      initial={{ x: -100 }}
-      animate={{ x: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <ul className="space-y-6">
-        {navItems.map((item, _) => (
-          <motion.li 
-            key={item.label}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <a
-              href={item.href}
-              className="flex flex-col items-center gap-1 text-gray-300 hover:text-blue-400 transition-colors"
+    <div className="flex justify-center fixed z-50 w-full md:w-[108px] md:left-4 md:top-1/2 md:-translate-y-1/3 bottom-5">
+      <motion.nav
+        className="bg-gray-800/90 backdrop-blur-sm px-2 py-3 rounded-2xl shadow-lg border border-gray-600 flex items-center justify-center w-full max-w-[85%] md:max-w-full max-h-[90vh] md:max-h-[80vh] overflow-y-auto"
+        initial={{ y: 100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <ul className="flex md:flex-col w-full justify-between md:justify-start md:space-y-4 lg:space-y-6 md:space-x-0 py-1">
+          {navItems.map((item) => (
+            <motion.li
+              key={item.label}
+              className="flex-1 md:flex-none min-w-0 min-h-0"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <item.icon className="w-6 h-6" />
-              <span className="text-xs font-medium">{item.label}</span>
-            </a>
-          </motion.li>
-        ))}
-      </ul>
-    </motion.nav>
+              <a
+                href={item.href}
+                className="flex flex-col items-center gap-0.5 md:gap-1 text-gray-300 hover:text-blue-400 transition-colors px-1 py-0.5"
+              >
+                <item.icon className="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-5 md:h-5 lg:w-6 lg:h-6 flex-shrink-0" />
+                <span className="text-[8px] sm:text-[10px] md:text-xs font-medium truncate w-full text-center">
+                  {item.label}
+                </span>
+              </a>
+            </motion.li>
+          ))}
+        </ul>
+      </motion.nav>
+    </div>
   );
 }

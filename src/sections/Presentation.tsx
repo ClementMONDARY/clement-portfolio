@@ -71,6 +71,10 @@ export default function Presentation() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
+          style={{ 
+            display: opacity.get() === 0 ? 'none' : 'flex',
+            pointerEvents: opacity.get() === 0 ? 'none' : 'auto'
+          }}
         >
           <motion.a
             href="https://github.com/ClementMONDARY"
@@ -92,14 +96,14 @@ export default function Presentation() {
           >
             <Linkedin className="w-6 h-6 text-white" />
           </motion.a>
-            <motion.a
+          <motion.a
             href="mailto:clement.mondary@edu.ecole-89.com"
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.95 }}
             className="p-4 bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
-            >
+          >
             <Mail className="w-6 h-6 text-white" />
-            </motion.a>
+          </motion.a>
         </motion.div>
       </motion.div>
     </section>

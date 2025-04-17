@@ -1,7 +1,7 @@
 export const parcours = [
   {
     title: "Licence Programmation Informatique",
-    etablissement: "Ecole supérieur du Numérique 89",
+    etablissement: "Ecole supérieure du Numérique 89",
     dates: "2023 - In progress",
   },
   {
