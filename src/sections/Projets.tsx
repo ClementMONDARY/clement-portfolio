@@ -17,7 +17,7 @@ export default function Projets() {
             {projects.map((project, index) => (
                 <motion.div
                 key={index}
-                className="relative max-h-[350px]"
+                className="relative min-h-[200px] h-auto"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -26,68 +26,76 @@ export default function Projets() {
                 >
                   <div className={`absolute inset-0 w-full scale-105 ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-blue-500 to-purple-500 opacity-20 transform -rotate-1 shadow-2xl`} />
                   <div className={`absolute inset-0 w-full scale-105 ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-indigo-500 to-pink-500 opacity-20 transform rotate-1 shadow-2xl`} />
-                  <div className="md:flex h-full relative z-10">
-                      <div className="md:w-2/5 h-48 md:h-[350px]">
-                      <img
-                      src={`${import.meta.env.BASE_URL}/assets/images/projets/${project.image}`}
-                      alt={project.title}
-                      className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 transform ${index % 2 === 0 ? '-translate-x-[8px]' : 'translate-x-[8px]'} ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}
-                      />
+                  
+                  <div className="flex items-center flex-col md:flex-row relative z-10">
+                      {/* Container de l'image avec hauteur fixe et overflow hidden */}
+                      <div className="w-full md:w-2/5 h-[300px] overflow-hidden rounded-t-xl md:rounded-tr-none md:rounded-l-xl">
+                        <img
+                          src={`${import.meta.env.BASE_URL}/assets/images/projets/${project.image}`}
+                          alt={project.title}
+                          className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 transform ${
+                            index % 2 === 0 ? '-translate-x-[8px]' : 'translate-x-[8px]'
+                          } ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}
+                        />
                       </div>
-                    <div className="p-8 md:w-3/5 overflow-y-auto">
-                    <h3 className="text-2xl font-bold mb-4 text-white">{project.title}</h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-4 py-1.5 bg-blue-900 text-blue-100 rounded-full text-sm font-medium"
-                      >
-                        {tag}
-                      </span>
-                      ))}
-                    </div>
-                    <div className="flex justify-between">
-                      {project.github ? (
-                        <motion.a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                        >
-                        <Github className="w-5 h-5" />
-                        <span className="font-medium">Voir le code</span>
-                        </motion.a>
-                      ) : (
-                        <motion.a className="invisible">
-                        <span></span>
-                        </motion.a>
-                      )}
-                      {project.exec ? (
-                      <motion.a
-                        href={`${import.meta.env.BASE_URL}/exec/${project.exec}`}
-                        download
-                        className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        <Download className="w-5 h-5" />
-                        <span className="font-medium">Télécharger</span>
-                      </motion.a>
-                      ) : project.demo ? (
-                      <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
-                        whileHover={{ scale: 1.05 }}
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                        <span className="font-medium">Voir le projet</span>
-                      </motion.a>
-                      ) : null}
-                    </div>
-                    </div>
+
+                      {/* Contenu textuel */}
+                      <div className="w-full md:w-3/5 p-4 md:p-8">
+                        <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">{project.title}</h3>
+                        <p className="text-gray-300 mb-6 leading-relaxed break-words">{project.description}</p>
+                        
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.tags.map((tag, tagIndex) => (
+                            <span
+                              key={tagIndex}
+                              className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="flex flex-wrap gap-4 justify-between">
+                          {project.github ? (
+                            <motion.a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                            >
+                            <Github className="w-5 h-5" />
+                            <span className="font-medium">Voir le code</span>
+                            </motion.a>
+                          ) : (
+                            <motion.a className="invisible">
+                            <span></span>
+                            </motion.a>
+                          )}
+                          {project.exec ? (
+                          <motion.a
+                            href={`${import.meta.env.BASE_URL}/exec/${project.exec}`}
+                            download
+                            className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            <Download className="w-5 h-5" />
+                            <span className="font-medium">Télécharger</span>
+                          </motion.a>
+                          ) : project.demo ? (
+                          <motion.a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
+                            whileHover={{ scale: 1.05 }}
+                          >
+                            <ExternalLink className="w-5 h-5" />
+                            <span className="font-medium">Voir le projet</span>
+                          </motion.a>
+                          ) : null}
+                        </div>
+                      </div>
                   </div>
                 </motion.div>
             ))}
