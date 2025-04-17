@@ -8,7 +8,7 @@ export default function ExperiencesFormations() {
   const [showExperiences, setShowExperiences] = useState(true);
 
   return (
-    <section id="experiences" className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-br from-blue-950/50 via-indigo-950/50 to-purple-950/50 border-t border-gray-700/50">
+    <section id="experiences" className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-tl from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50">
       <motion.div
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0 }}
@@ -68,25 +68,17 @@ export default function ExperiencesFormations() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div
-              className={`absolute inset-y-0 w-full ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'}
-              from-blue-500 to-purple-500 opacity-20 transform -rotate-1 shadow-2xl`}
-              />
-              <div
-              className={`absolute inset-y-0 w-full ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'}
-              from-indigo-500 to-pink-500 opacity-20 transform rotate-1 shadow-2xl`}
-              />
+              <div className={`absolute inset-y-0 w-full scale-105 ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-blue-500 to-purple-500 opacity-20 transform -rotate-1 shadow-2xl`} />
+              <div className={`absolute inset-y-0 w-full scale-105 ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-indigo-500 to-pink-500 opacity-20 transform rotate-1 shadow-2xl`} />
               <div className="md:flex h-full relative z-10">
-              {/* Image */}
-              <div className="md:w-1/3 h-40 md:h-auto overflow-hidden">
+              <div className="md:w-1/3 h-40 md:h-auto">
                 <img
                 src={`${import.meta.env.BASE_URL}/assets/images/${item.image}`}
                 alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110 h-[200px]"
+                className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 h-[200px] transform ${index % 2 === 0 ? '-translate-x-[7px]' : 'translate-x-[7px]'} ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}
                 />
               </div>
 
-              {/* Content */}
               <div className="p-6 md:w-2/3">
                 <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
                 <p className="text-gray-300 mb-1">
@@ -94,7 +86,6 @@ export default function ExperiencesFormations() {
                 </p>
                 <p className="text-sm text-gray-400">{item.period}</p>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mt-4">
                 {item.tags.map((tag, tagIndex) => (
                   <span

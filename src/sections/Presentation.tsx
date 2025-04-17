@@ -7,7 +7,7 @@ export default function Presentation() {
 
   return (
     <section id="presentation" className="min-h-screen flex items-center justify-center p-8 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-indigo-950 to-purple-950 opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-950 via-blue-950 to-purple-950 opacity-50" />
       
       <motion.div 
         className="max-w-6xl mx-auto relative flex flex-col items-center px-4"

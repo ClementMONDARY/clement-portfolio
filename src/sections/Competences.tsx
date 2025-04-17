@@ -4,7 +4,7 @@ export default function Competences() {
     const skills = ['Rust', 'Godot', 'C', 'HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'Symfony', 'React', 'Node', 'Blender'];
 
     return (
-        <section id="competences" className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-tr from-blue-950/50 via-indigo-950/50 to-purple-950/50 border-t border-gray-700/50">
+        <section id="competences" className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-tr from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50">
         <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0 }}
@@ -34,14 +34,8 @@ export default function Competences() {
               </div>
               <h3 className="font-semibold text-white">{skill}</h3>
             </div>
-            <div
-              className={`absolute inset-0 w-full ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'}
-              from-blue-500 to-purple-500 opacity-20 transform -rotate-2 shadow-2xl`}
-            />
-            <div
-              className={`absolute inset-0 w-full ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'}
-              from-indigo-500 to-pink-500 opacity-20 transform rotate-2 shadow-2xl`}
-            />
+            <div className={`absolute inset-0 w-full ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-blue-500 to-purple-500 opacity-20 transform -rotate-2 shadow-2xl`} />
+            <div className={`absolute inset-0 w-full ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-indigo-500 to-pink-500 opacity-20 transform rotate-2 shadow-2xl`} />
             </motion.div>
         ))}
           </div>

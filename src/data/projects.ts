@@ -31,7 +31,7 @@ export const projects = [
   },
   {
     title: "Maze",
-    description: "Un programme C qui trouve la sortie d'un labyrinthe. Il trouve la sortie en tenant le mur de droite. Un des tous premiers projets que j'ai réalisé en C en classe, il m'a permis de découvrir des fonctionnalités avancées du langage comme les structures, les pointeurs et la gestion de la mémoire. et le programme peut trouver la sortie en moins de 10 secondes, même pour des labyrinthes de 1000x1000 cases.",
+    description: "Un programme C qui trouve la sortie d'un labyrinthe. Il trouve la sortie en tenant le mur de droite. Un des tous premiers projets que j'ai réalisé en C en classe, il m'a permis de découvrir des fonctionnalités avancées du langage comme les structures, les pointeurs et la gestion de la mémoire. Le programme peut trouver la sortie en moins de 10 secondes, même pour des labyrinthes de 1000x1000 cases.",
     image: "maze.gif",
     tags: ["C", "Algorithm", "Recursion"],
     github: "https://github.com/ClementMONDARY/maze",
