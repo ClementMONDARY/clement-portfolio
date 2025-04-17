@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="relative text-white py-16 min-h-[300px] bg-gradient-to-tr from-purple-950/50 via-blue-950/50 to-purple-950/50">
-      <div className="absolute bottom-0 left-0 w-full h-[320px] overflow-y-hidden">
+      <div className="absolute bottom-0 left-0 w-full h-[320px] overflow-hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 left-0 w-full min-w-[1440px] preserve-aspect" preserveAspectRatio="xMidYMid slice">
           <path fill="rgb(88 28 135 / 0.5)" d="M0,128L40,144C80,160,160,192,240,181.3C320,171,400,117,480,106.7C560,96,640,128,720,160C800,192,880,224,960,240C1040,256,1120,256,1200,218.7C1280,181,1360,107,1400,69.3L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"/>
         </svg>
