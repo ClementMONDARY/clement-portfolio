@@ -61,42 +61,49 @@ export default function ExperiencesFormations() {
           {(showExperiences ? experiences : formations).map((item, index) => (
             <motion.div
               key={index}
-              className="rounded-x1 relative absolute h-[200px]"
+              className="rounded-xl relative min-h-[200px] h-auto"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
+              {/* Gradients de fond */}
               <div className={`absolute inset-y-0 w-full scale-105 ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-blue-500 to-purple-500 opacity-20 transform -rotate-1 shadow-2xl`} />
               <div className={`absolute inset-y-0 w-full scale-105 ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-indigo-500 to-pink-500 opacity-20 transform rotate-1 shadow-2xl`} />
-              <div className="md:flex h-full relative z-10">
-              <div className="md:w-1/3 h-40 md:h-auto">
-                <img
-                src={`${import.meta.env.BASE_URL}/assets/images/${item.image}`}
-                alt={item.title}
-                className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 h-[200px] transform ${index % 2 === 0 ? '-translate-x-[7px]' : 'translate-x-[7px]'} ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}
-                />
-              </div>
-
-              <div className="p-6 md:w-2/3">
-                <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
-                <p className="text-gray-300 mb-1">
-                {showExperiences ? item.company : item.school}
-                </p>
-                <p className="text-sm text-gray-400">{item.period}</p>
-
-                <div className="flex flex-wrap gap-2 mt-4">
-                {item.tags.map((tag, tagIndex) => (
-                  <span
-                  key={tagIndex}
-                  className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium border border-white/30 shadow-md"
-                  >
-                  {tag}
-                  </span>
-                ))}
+              
+              {/* Contenu */}
+              <div className="flex flex-col md:flex-row relative z-10">
+                {/* Image */}
+                <div className="w-full md:w-1/3 h-48 md:h-auto">
+                  <img
+                    src={`${import.meta.env.BASE_URL}/assets/images/${item.image}`}
+                    alt={item.title}
+                    className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 transform ${
+                      index % 2 === 0 ? '-translate-x-[7px]' : 'translate-x-[7px]'
+                    } ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}
+                  />
                 </div>
-              </div>
+
+                {/* Texte et tags */}
+                <div className="w-full md:w-2/3 p-4 md:p-6">
+                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
+                  <p className="text-gray-300 mb-1">
+                    {showExperiences ? item.company : item.school}
+                  </p>
+                  <p className="text-sm text-gray-400">{item.period}</p>
+
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {item.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium border border-white/30 shadow-md"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
