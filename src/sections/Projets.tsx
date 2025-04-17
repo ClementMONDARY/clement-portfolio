@@ -29,7 +29,7 @@ export default function Projets() {
                   
                   <div className="flex items-center flex-col md:flex-row relative z-10">
                       {/* Container de l'image avec hauteur fixe et overflow hidden */}
-                      <div className="w-full md:w-2/5 h-[300px] overflow-hidden rounded-t-xl md:rounded-tr-none md:rounded-l-xl">
+                      <div className="w-full md:w-2/5 h-[300px] overflow-hidden">
                         <img
                           src={`${import.meta.env.BASE_URL}/assets/images/projets/${project.image}`}
                           alt={project.title}
