@@ -22,7 +22,7 @@ export default function ExperiencesFormations() {
           </h2>
 
           {/* Toggle Switch */}
-          <div className="flex items-center gap-4 p-2 bg-gray-700 rounded-full shadow-lg">
+          <div className="flex items-center gap-4 p-2 bg-gray-500/20 rounded-full shadow-lg">
             <motion.button
               onClick={() => setShowExperiences(true)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full transition-colors ${
@@ -64,7 +64,7 @@ export default function ExperiencesFormations() {
               className="rounded-x1 relative absolute h-[200px]"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >

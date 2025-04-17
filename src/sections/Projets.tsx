@@ -20,7 +20,7 @@ export default function Projets() {
                 className="bg-gray-700 rounded-xl overflow-hidden shadow-lg max-h-[350px]"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
                 >
