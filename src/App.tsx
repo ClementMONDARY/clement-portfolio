@@ -4,6 +4,7 @@ import Parcours from './sections/Parcours';
 import ExperiencesFormations from './sections/ExperiencesFormations';
 import Competences from './sections/Competences';
 import Projets from './sections/Projets';
+import Footer from './sections/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ExperiencesFormations />
       <Competences />
       <Projets />
+      <Footer />
     </div>
   );
 }
