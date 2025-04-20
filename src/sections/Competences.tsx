@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 export default function Competences() {
-    const skills = ['Rust', 'Godot', 'C', 'HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'Symfony', 'React', 'Node', 'Blender'];
+    const skills = ['Rust', 'Godot', 'React', 'Node', 'Blender', 'Symfony', 'C', 'HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'];
 
     return (
         <section id="competences" className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-tr from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50">
