@@ -75,6 +75,6 @@ export const projects = [
       "Pathfinding",
       "Shaders",
     ],
-    exec: "Gulag.exe",
+    demo: "https://nemeco.itch.io/gulag",
   },
 ];
