@@ -9,6 +9,24 @@ export const projects = [
     exec: "runner.exe",
   },
   {
+    title: "Gulag",
+    description:
+      "Mon premier jeu en 3D, un court projet de 4 jours. Il s'agit d'un jeu de tire à la premiere personne. Ce projet est la fondation d'un jeu plus complet que je compte développer dans le futur.",
+    image: "gulag.gif",
+    tags: [
+      "Godot",
+      "GDScript",
+      "3D",
+      "FPS",
+      "Animation",
+      "Sound Design",
+      "UI",
+      "Pathfinding",
+      "Shaders",
+    ],
+    demo: "https://nemeco.itch.io/gulag",
+  },
+  {
     title: "Godot Premier Pas",
     description:
       "Un petit projet pour découvrir le moteur Godot et le langage GDScript. C'est un défi que je me suis lancé moi même dans le cadre de mon objectif professionel. Le jeu n'a pas de but précis, j'ai juste joué un peu avec les mécaniques de Godot pour le découvrir.",
@@ -58,23 +76,5 @@ export const projects = [
     image: "windraw.gif",
     tags: ["Rust", "WinitHandler"],
     github: "https://github.com/ClementMONDARY/windraw",
-  },
-  {
-    title: "Gulag",
-    description:
-      "Mon premier jeu en 3D, un court projet de 4 jours. Il s'agit d'un jeu de tire à la premiere personne. Ce projet est la fondation d'un jeu plus complet que je compte développer dans le futur.",
-    image: "gulag.gif",
-    tags: [
-      "Godot",
-      "GDScript",
-      "3D",
-      "FPS",
-      "Animation",
-      "Sound Design",
-      "UI",
-      "Pathfinding",
-      "Shaders",
-    ],
-    demo: "https://nemeco.itch.io/gulag",
-  },
+  }
 ];
