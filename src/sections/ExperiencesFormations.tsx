@@ -1,17 +1,14 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { Briefcase, GraduationCap } from "lucide-react";
-import { experiences } from "../data/experiences";
-import { formations } from "../data/formations";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Briefcase, GraduationCap } from 'lucide-react';
+import { experiences } from '../data/experiences';
+import { formations } from '../data/formations';
 
 export default function ExperiencesFormations() {
   const [showExperiences, setShowExperiences] = useState(true);
 
   return (
-    <section
-      id="experiences"
-      className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-tl from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50"
-    >
+    <section id="experiences" className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-tl from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50">
       <motion.div
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0 }}
@@ -30,8 +27,8 @@ export default function ExperiencesFormations() {
               onClick={() => setShowExperiences(true)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full transition-colors ${
                 showExperiences
-                  ? "bg-blue-500 text-white"
-                  : "text-gray-300 hover:bg-gray-600"
+                  ? 'bg-blue-500 text-white'
+                  : 'text-gray-300 hover:bg-gray-600'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -43,8 +40,8 @@ export default function ExperiencesFormations() {
               onClick={() => setShowExperiences(false)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full transition-colors ${
                 !showExperiences
-                  ? "bg-blue-500 text-white"
-                  : "text-gray-300 hover:bg-gray-600"
+                  ? 'bg-blue-500 text-white'
+                  : 'text-gray-300 hover:bg-gray-600'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -72,39 +69,25 @@ export default function ExperiencesFormations() {
               whileHover={{ y: -5 }}
             >
               {/* Gradients de fond */}
-              <div
-                className={`absolute inset-y-0 w-full scale-105 ${
-                  index % 2 === 0 ? "bg-gradient-to-l" : "bg-gradient-to-r"
-                } from-blue-500 to-purple-500 opacity-20 transform -rotate-1 shadow-2xl`}
-              />
-              <div
-                className={`absolute inset-y-0 w-full scale-105 ${
-                  index % 2 === 0 ? "bg-gradient-to-l" : "bg-gradient-to-r"
-                } from-indigo-500 to-pink-500 opacity-20 transform rotate-1 shadow-2xl`}
-              />
-
+              <div className={`absolute inset-y-0 w-full scale-105 ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-blue-500 to-purple-500 opacity-20 transform -rotate-1 shadow-2xl`} />
+              <div className={`absolute inset-y-0 w-full scale-105 ${index % 2 === 0 ? 'bg-gradient-to-l' : 'bg-gradient-to-r'} from-indigo-500 to-pink-500 opacity-20 transform rotate-1 shadow-2xl`} />
+              
               {/* Contenu */}
               <div className="flex flex-col md:flex-row relative z-10">
                 {/* Image */}
                 <div className="w-full md:w-1/3 h-48 md:h-auto">
                   <img
-                    src={`./${import.meta.env.BASE_URL}/assets/images/${
-                      item.image
-                    }`}
+                    src={`${import.meta.env.BASE_URL}/assets/images/${item.image}`}
                     alt={item.title}
                     className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 transform ${
-                      index % 2 === 0
-                        ? "-translate-x-[7px]"
-                        : "translate-x-[7px]"
-                    } ${index % 2 === 0 ? "-rotate-1" : "rotate-1"}`}
+                      index % 2 === 0 ? '-translate-x-[7px]' : 'translate-x-[7px]'
+                    } ${index % 2 === 0 ? '-rotate-1' : 'rotate-1'}`}
                   />
                 </div>
 
                 {/* Texte et tags */}
                 <div className="w-full md:w-2/3 p-4 md:p-6">
-                  <h3 className="text-xl font-bold mb-2 text-white">
-                    {item.title}
-                  </h3>
+                  <h3 className="text-xl font-bold mb-2 text-white">{item.title}</h3>
                   <p className="text-gray-300 mb-1">
                     {showExperiences ? item.company : item.school}
                   </p>
