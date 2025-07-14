@@ -40,7 +40,6 @@ Thumbs.db
 .env.production.local
 
 # Tailwind CSS
-tailwind.config.js
 tailwind.config.cjs
 
 # TypeScript
