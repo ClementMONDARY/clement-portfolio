@@ -9,6 +9,24 @@ export const projects = [
     exec: "runner.exe",
   },
   {
+    title: "Grav Rush",
+    description:
+      "Un prototype de jeu de plateforme 2D. Il est encore en développement, mais il est jouable. Mon projet le plus ambitieux à ce jour. La partie la plus amusante à été le Level Design.",
+    image: "grav-rush.gif",
+    tags: [
+      "Godot",
+      "GDScript",
+      "2D",
+      "Platformer",
+      "Animation",
+      "Sound Design",
+      "Level Design",
+      "Shaders",
+    ],
+    github: "https://github.com/ClementMONDARY/grav_rush",
+    demo: "https://nemeco.itch.io/grav-rush",
+  },
+  {
     title: "Gulag",
     description:
       "Mon premier jeu en 3D, un court projet de 4 jours. Il s'agit d'un jeu de tire à la premiere personne. Ce projet est la fondation d'un jeu plus complet que je compte développer dans le futur.",
@@ -24,7 +42,23 @@ export const projects = [
       "Pathfinding",
       "Shaders",
     ],
+    github: "https://github.com/ClementMONDARY/gulag",
     demo: "https://nemeco.itch.io/gulag",
+  },
+  {
+    title: "Site vitrine M-Signalétique",
+    description:
+      "Un site vitrine pour la société de signalétique 'M-Signalétique'. Étant seul développeur, j'ai réalisé le site de A à Z. Le site est responsive et utilise des animations pour améliorer l'expérience utilisateur.",
+    image: "m-signaletique.gif",
+    tags: [
+      "React",
+      "Vite",
+      "Responsive",
+      "Hebergement",
+      "Formulaire",
+      "Communication",
+    ],
+    demo: "https://m-signaletique.fr",
   },
   {
     title: "Godot Premier Pas",
@@ -43,6 +77,7 @@ export const projects = [
       "Level Design",
     ],
     github: "https://github.com/ClementMONDARY/Tree-and-Inventory",
+    demo: "https://nemeco.itch.io/tree-and-inventory",
   },
   {
     title: "LoL Website",
@@ -76,5 +111,5 @@ export const projects = [
     image: "windraw.gif",
     tags: ["Rust", "WinitHandler"],
     github: "https://github.com/ClementMONDARY/windraw",
-  }
+  },
 ];
