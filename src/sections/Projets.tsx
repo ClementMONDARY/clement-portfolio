@@ -1,8 +1,36 @@
 import { motion } from "framer-motion";
 import { Github, ExternalLink, Download } from "lucide-react";
-import { projects } from "../data/projects";
+import { projects, switches } from "../data/projects";
+import { useState } from "react";
 
 export default function Projets() {
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([
+    "all",
+  ]);
+  const categories = [{ label: "all", image: null }, ...switches];
+
+  const toggleCategory = (category: string) => {
+    if (category === "all") {
+      setSelectedCategories(["all"]);
+    } else {
+      setSelectedCategories((prev) => {
+        const newCategories = prev.filter((cat) => cat !== "all");
+        if (newCategories.includes(category)) {
+          const filtered = newCategories.filter((cat) => cat !== category);
+          return filtered.length === 0 ? ["all"] : filtered;
+        } else {
+          return [...newCategories, category];
+        }
+      });
+    }
+  };
+
+  const filteredProjects = selectedCategories.includes("all")
+    ? projects
+    : projects.filter((project) =>
+        project.category.some((cat) => selectedCategories.includes(cat))
+      );
+
   return (
     <section
       id="projets"
@@ -18,8 +46,36 @@ export default function Projets() {
         <h2 className="text-3xl font-bold mb-12 text-center text-white">
           Mes Projets
         </h2>
+
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((category) => (
+            <motion.button
+              key={category.label}
+              onClick={() => toggleCategory(category.label)}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+                selectedCategories.includes(category.label)
+                  ? "bg-blue-600 text-white shadow-lg scale-105"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
+              }`}
+              whileHover={{
+                scale: selectedCategories.includes(category.label) ? 1.05 : 1.1,
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {category.image && (
+                <img
+                  src={`./assets/images/${category.image}`}
+                  alt={category.label}
+                  className="w-5 h-5 object-contain"
+                />
+              )}
+              {category.label === "all" ? "Tous" : category.label}
+            </motion.button>
+          ))}
+        </div>
+
         <div className="space-y-16">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={index}
               className="relative min-h-[200px] h-auto"
@@ -44,9 +100,9 @@ export default function Projets() {
                 {/* Container de l'image avec hauteur fixe et overflow hidden */}
                 <div className="w-full md:w-2/5 h-[300px] overflow-hidden">
                   <img
-                    src={`./${import.meta.env.BASE_URL}/assets/images/projets/${
-                      project.image
-                    }`}
+                    src={`././${
+                      import.meta.env.BASE_URL
+                    }/assets/images/projets/${project.image}`}
                     alt={project.title}
                     className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 transform ${
                       index % 2 === 0

@@ -7,11 +7,12 @@ export const projects = [
     tags: ["Rust", "Raycasting", "DDA", "Texturing"],
     github: "https://github.com/ClementMONDARY/runner",
     exec: "runner.exe",
+    category: ["Rust"],
   },
   {
     title: "Grav Rush",
     description:
-      "Un prototype de jeu de plateforme 2D. Il est encore en développement, mais il est jouable. Mon projet le plus ambitieux à ce jour. La partie la plus amusante à été le Level Design.",
+      "Un prototype de jeu de plateforme 2D. Il est encore en développement, mais il est jouable. Mon projet le plus ambitieux à ce jour. La partie la plus amusante à été le Level Design et le développement du systeme de mouvement.",
     image: "grav-rush.gif",
     tags: [
       "Godot",
@@ -25,6 +26,7 @@ export const projects = [
     ],
     github: "https://github.com/ClementMONDARY/grav_rush",
     demo: "https://nemeco.itch.io/grav-rush",
+    category: ["Godot"],
   },
   {
     title: "Gulag",
@@ -44,6 +46,7 @@ export const projects = [
     ],
     github: "https://github.com/ClementMONDARY/gulag",
     demo: "https://nemeco.itch.io/gulag",
+    category: ["Godot"],
   },
   {
     title: "Site vitrine M-Signalétique",
@@ -59,6 +62,7 @@ export const projects = [
       "Communication",
     ],
     demo: "https://m-signaletique.fr",
+    category: ["Web"],
   },
   {
     title: "Godot Premier Pas",
@@ -78,6 +82,7 @@ export const projects = [
     ],
     github: "https://github.com/ClementMONDARY/Tree-and-Inventory",
     demo: "https://nemeco.itch.io/tree-and-inventory",
+    category: ["Godot"],
   },
   {
     title: "LoL Website",
@@ -87,6 +92,7 @@ export const projects = [
     tags: ["HTML", "CSS", "JavaScript", "Insomnia", "API"],
     github: "https://github.com/ClementMONDARY/LoL_Website",
     demo: "https://clementmondary.github.io/LoL_Website/",
+    category: ["Web"],
   },
   {
     title: "Trésor Locator",
@@ -95,6 +101,7 @@ export const projects = [
     image: "tresor.gif",
     tags: ["HTML", "CSS", "JavaScript", "XML", "Magento 2", "Google Maps API"],
     demo: "https://www.tresor-bijoux.fr",
+    category: ["Web"],
   },
   {
     title: "Maze",
@@ -103,6 +110,7 @@ export const projects = [
     image: "maze.gif",
     tags: ["C", "Algorithm", "Recursion"],
     github: "https://github.com/ClementMONDARY/maze",
+    category: ["C"],
   },
   {
     title: "Windraw",
@@ -111,5 +119,13 @@ export const projects = [
     image: "windraw.gif",
     tags: ["Rust", "WinitHandler"],
     github: "https://github.com/ClementMONDARY/windraw",
+    category: ["Rust"],
   },
+];
+
+export const switches = [
+  { label: "Rust", image: "softwares/RUST.png" },
+  { label: "Godot", image: "softwares/GODOT.png" },
+  { label: "Web", image: "softwares/HTML.png" },
+  { label: "C", image: "softwares/C.png" },
 ];
