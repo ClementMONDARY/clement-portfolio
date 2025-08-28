@@ -3,7 +3,7 @@ export const formations = [
     title: "Bachelor Programmation Informatique",
     school: "École Supérieure du Numérique 89",
     location: "Ferrières-en-Brie",
-    period: "2023 - Informatique",
+    period: "2023 - Aujourd'hui",
     image: "89.png",
     tags: ["Programmation", "Web", "Algorithmie", "Base de données", "Gestion de projet"]
   },
