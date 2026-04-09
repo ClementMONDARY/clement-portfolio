@@ -2,15 +2,17 @@ import { motion } from "framer-motion";
 
 export default function Competences() {
   const skills = [
-    "Rust",
     "Godot",
-    "React",
-    "Node",
     "Blender",
-    "Symfony",
+    "React",
+    "Salesforce",
+    "Magento",
+    "Figma",
+    "Rust",
     "C",
     "HTML",
     "CSS",
+    "Typescript",
     "JavaScript",
     "PHP",
     "SQL",
@@ -48,6 +50,12 @@ export default function Competences() {
                     src={`./${
                       import.meta.env.BASE_URL
                     }/assets/images/softwares/${skill.toUpperCase()}.png`}
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.src.endsWith(".webp")) {
+                        target.src = `./${import.meta.env.BASE_URL}/assets/images/softwares/${skill.toUpperCase()}.webp`;
+                      }
+                    }}
                     alt={`${skill} logo`}
                     className="w-12 h-12 object-contain"
                   />
