@@ -41,7 +41,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <p className="text-sm text-gray-400">© 2025 Clément Mondary</p>
+        <p className="text-sm text-gray-400">© 2026 Clément Mondary</p>
       </div>
     </footer>
   );

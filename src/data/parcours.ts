@@ -1,7 +1,7 @@
 export const parcours = [
   {
-    title: "Licence Programmation Informatique",
-    etablissement: "Ecole supérieure du Numérique 89",
+    title: "Bachelor Architecte en logiciels performants et sécurisés (niv 6)",
+    etablissement: "89 Ecole supérieure du Numérique",
     dates: "2023 - In progress",
   },
   {

@@ -1,11 +1,11 @@
 export const formations = [
   {
-    title: "Bachelor Programmation Informatique",
+    title: "Bachelor Architecte en logiciels performants et sécurisés",
     school: "École Supérieure du Numérique 89",
     location: "Ferrières-en-Brie",
-    period: "2023 - Aujourd'hui",
+    period: "2023 - In Progress",
     image: "89.png",
-    tags: ["Programmation", "Web", "Algorithmie", "Base de données", "Gestion de projet"]
+    tags: ["Web", "C", "Rust", "TypeScript", "React", "Business English", "Gestion de Projet"]
   },
   {
     title: "Baccalauréat Général",

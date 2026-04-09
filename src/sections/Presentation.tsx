@@ -83,7 +83,7 @@ export default function Presentation() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-3xl text-blue-400 mb-8 font-medium text-center"
         >
-          Développeur Web
+          Concepteur Développeur d’Applications<br/>Aspirant Game Programmer
         </motion.p>
 
         <div className="relative w-80 h-96 mb-8">
