@@ -12,7 +12,7 @@ export default function ExperiencesFormations() {
       id="experiences"
       className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-tl from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50"
     >
-      <motion.div
+      <div
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -26,7 +26,7 @@ export default function ExperiencesFormations() {
 
           {/* Toggle Switch */}
           <div className="flex items-center gap-4 p-2 bg-gray-500/20 rounded-full shadow-lg">
-            <motion.button
+            <button
               onClick={() => setShowExperiences(true)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full transition-colors ${
                 showExperiences
@@ -38,8 +38,8 @@ export default function ExperiencesFormations() {
             >
               <Briefcase className="w-5 h-5" />
               <span className="font-medium">Expériences</span>
-            </motion.button>
-            <motion.button
+            </button>
+            <button
               onClick={() => setShowExperiences(false)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full transition-colors ${
                 !showExperiences
@@ -51,18 +51,18 @@ export default function ExperiencesFormations() {
             >
               <GraduationCap className="w-5 h-5" />
               <span className="font-medium">Formations</span>
-            </motion.button>
+            </button>
           </div>
         </div>
 
-        <motion.div
+        <div
           className="space-y-8"
           initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           {(showExperiences ? experiences : formations).map((item, index) => (
-            <motion.div
+            <div
               key={index}
               className="rounded-xl relative min-h-[200px] h-auto"
               initial={{ opacity: 0, y: 50 }}
@@ -122,10 +122,10 @@ export default function ExperiencesFormations() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 }
