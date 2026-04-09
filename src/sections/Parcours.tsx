@@ -5,7 +5,7 @@ import { ArrowUp } from 'lucide-react';
 export default function Parcours() {
   return (
     <section id="parcours" className="min-h-screen py-20 overflow-hidden bg-gradient-to-tr from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50">
-      <div
+      <motion.div
         className="max-w-4xl mx-auto px-4"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -19,7 +19,7 @@ export default function Parcours() {
           </div>
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-blue-800"></div>
           {parcours.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="relative mb-12"
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -39,10 +39,10 @@ export default function Parcours() {
               </div>
               <div className={`absolute inset-y-0 ${index % 2 === 0 ? 'right-0 w-1/2' : 'left-0 w-1/2'} ${index % 2 === 0 ? 'bg-gradient-to-r' : 'bg-gradient-to-l'} from-blue-500 to-purple-500 opacity-20 transform -rotate-2 shadow-2xl`} />
               <div className={`absolute inset-y-0 ${index % 2 === 0 ? 'right-0 w-1/2' : 'left-0 w-1/2'} ${index % 2 === 0 ? 'bg-gradient-to-r' : 'bg-gradient-to-l'} from-indigo-500 to-pink-500 opacity-20 transform rotate-2 shadow-2xl`} />
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

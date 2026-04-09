@@ -52,39 +52,39 @@ export default function Presentation() {
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-purple-950 via-blue-950 to-purple-950 opacity-50" />
 
-      <div
+      <motion.div
         className="max-w-6xl mx-auto relative flex flex-col items-center px-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         style={{ opacity }}
       >
-        <p
+        <motion.p
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-2xl text-gray-300 mb-4 font-light"
         >
           Hello, moi c'est
-        </p>
+        </motion.p>
 
-        <h1
+        <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-5xl md:text-6xl font-bold mb-4 text-white text-center"
         >
           Clément MONDARY
-        </h1>
+        </motion.h1>
 
-        <p
+        <motion.p
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-3xl text-blue-400 mb-8 font-medium text-center"
         >
           Concepteur Développeur d’Applications<br/>Aspirant Game Programmer
-        </p>
+        </motion.p>
 
         <div className="relative w-80 h-96 mb-8">
           <div className="absolute inset-0 bg-gradient-to-b from-blue-500 to-purple-500 rounded-t-full rounded-b-2xl opacity-20 transform -rotate-3" />
@@ -100,7 +100,7 @@ export default function Presentation() {
           </div>
         </div>
 
-        <a
+        <motion.a
           href={`./${import.meta.env.BASE_URL}/docs/CV DEV.pdf`}
           download
           className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-medium shadow-lg hover:bg-blue-700 transition-colors mb-8"
@@ -109,9 +109,9 @@ export default function Presentation() {
         >
           <FileDown className="w-5 h-5" />
           Télécharger mon CV
-        </a>
+        </motion.a>
 
-        <div
+        <motion.div
           className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-6"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -121,7 +121,7 @@ export default function Presentation() {
             pointerEvents,
           }}
         >
-          <a
+          <motion.a
             href="https://github.com/ClementMONDARY"
             target="_blank"
             rel="noopener noreferrer"
@@ -130,8 +130,8 @@ export default function Presentation() {
             className="p-4 bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
           >
             <Github className="w-6 h-6 text-white" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="https://www.linkedin.com/in/clement-mondary"
             target="_blank"
             rel="noopener noreferrer"
@@ -140,17 +140,17 @@ export default function Presentation() {
             className="p-4 bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
           >
             <Linkedin className="w-6 h-6 text-white" />
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="mailto:clement.mondary@edu.ecole-89.com"
             whileHover={{ scale: 1.1, y: -5 }}
             whileTap={{ scale: 0.95 }}
             className="p-4 bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all"
           >
             <Mail className="w-6 h-6 text-white" />
-          </a>
-        </div>
-      </div>
+          </motion.a>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

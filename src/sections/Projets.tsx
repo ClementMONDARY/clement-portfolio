@@ -36,7 +36,7 @@ export default function Projets() {
       id="projets"
       className="min-h-screen py-20 px-8 overflow-hidden bg-gradient-to-tl from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50"
     >
-      <div
+      <motion.div
         className="max-w-6xl mx-auto"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -49,7 +49,7 @@ export default function Projets() {
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
-            <button
+            <motion.button
               key={category.label}
               onClick={() => toggleCategory(category.label)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -70,13 +70,13 @@ export default function Projets() {
                 />
               )}
               {category.label === "all" ? "Tous" : category.label}
-            </button>
+            </motion.button>
           ))}
         </div>
 
         <div className="space-y-16">
           {filteredProjects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
               className="relative min-h-[200px] h-auto"
               initial={{ opacity: 0, y: 50 }}
@@ -134,7 +134,7 @@ export default function Projets() {
 
                   <div className="flex flex-wrap gap-4 justify-between">
                     {project.github ? (
-                      <a
+                      <motion.a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -143,14 +143,14 @@ export default function Projets() {
                       >
                         <Github className="w-5 h-5" />
                         <span className="font-medium">Voir le code</span>
-                      </a>
+                      </motion.a>
                     ) : (
-                      <a className="invisible">
+                      <motion.a className="invisible">
                         <span></span>
-                      </a>
+                      </motion.a>
                     )}
                     {project.exec ? (
-                      <a
+                      <motion.a
                         href={`./${import.meta.env.BASE_URL}/exec/${
                           project.exec
                         }`}
@@ -160,9 +160,9 @@ export default function Projets() {
                       >
                         <Download className="w-5 h-5" />
                         <span className="font-medium">Télécharger</span>
-                      </a>
+                      </motion.a>
                     ) : project.demo ? (
-                      <a
+                      <motion.a
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -171,15 +171,15 @@ export default function Projets() {
                       >
                         <ExternalLink className="w-5 h-5" />
                         <span className="font-medium">Voir le projet</span>
-                      </a>
+                      </motion.a>
                     ) : null}
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
