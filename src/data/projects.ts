@@ -65,6 +65,15 @@ export const projects = [
     category: ["Web"],
   },
   {
+    title: "Trésor Rachat d'Or",
+    description:
+      "Un site vitrine pour la toute nouvelle franchise \"Trésor Rachat D'Or\". Développé dans un timing de 1 mois, moi même ainsi qu'un de mes tuteurs ont réussi à tenir une deadline sérré en proposant un site fonctionelle pour le web, ainsi que des affichages en magasins physique.",
+    image: "tresor-rachat-d-or.gif",
+    tags: ["HTML", "CSS", "PHP", "XML", "Magento 2", "Google Maps API"],
+    demo: "https://www.tresor-rachat-or.com",
+    category: ["Web"],
+  },
+  {
     title: "Godot Premier Pas",
     description:
       "Un petit projet pour découvrir le moteur Godot et le langage GDScript. C'est un défi que je me suis lancé moi même dans le cadre de mon objectif professionel. Le jeu n'a pas de but précis, j'ai juste joué un peu avec les mécaniques de Godot pour le découvrir.",
