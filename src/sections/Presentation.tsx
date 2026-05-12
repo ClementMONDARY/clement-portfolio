@@ -1,7 +1,9 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { FileDown, Github, Linkedin, Mail } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Presentation() {
+  const { t } = useLanguage();
   const { scrollYProgress } = useScroll();
 
   const opacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
@@ -65,7 +67,7 @@ export default function Presentation() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-2xl text-gray-300 mb-4 font-light"
         >
-          Hello, moi c'est
+          {t.presentation.greeting}
         </motion.p>
 
         <motion.h1
@@ -83,7 +85,7 @@ export default function Presentation() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-3xl text-blue-400 mb-8 font-medium text-center"
         >
-          Concepteur Développeur d’Applications<br/>Aspirant Game Programmer
+          {t.presentation.subtitle}<br/>{t.presentation.subtitleGame}
         </motion.p>
 
         <div className="relative w-80 h-96 mb-8">
@@ -94,7 +96,7 @@ export default function Presentation() {
               src={`./${
                 import.meta.env.BASE_URL
               }/assets/images/MONDARYClement.png`}
-              alt="Photo de profil"
+              alt={t.presentation.profileAlt}
               className="w-full h-full object-cover"
             />
           </div>
@@ -108,7 +110,7 @@ export default function Presentation() {
           whileTap={{ scale: 0.95 }}
         >
           <FileDown className="w-5 h-5" />
-          Télécharger mon CV
+          {t.presentation.downloadCV}
         </motion.a>
 
         <motion.div

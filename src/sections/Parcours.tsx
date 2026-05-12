@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { parcours } from '../data/parcours';
 import { ArrowUp } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Parcours() {
+  const { lang, t } = useLanguage();
   return (
     <section id="parcours" className="min-h-screen py-20 overflow-hidden bg-gradient-to-tr from-purple-950/50 via-blue-950/50 to-purple-950/50 border-t border-gray-700/50">
       <motion.div
@@ -12,7 +14,7 @@ export default function Parcours() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold mb-12 text-center text-white">Mon Parcours</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-white">{t.parcours.sectionTitle}</h2>
         <div className="relative min-h-[500px]">
           <div className="absolute left-1/2 transform -translate-x-1/2 -top-8">
             <ArrowUp className="w-8 h-8 text-blue-400" />
@@ -30,7 +32,7 @@ export default function Parcours() {
               <div className={`flex items-center ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
                 <div className="w-1/2 px-2 sm:px-4 md:px-6">
                   <div className="p-3 sm:p-4 md:p-6 relative z-10 overflow-hidden">
-                    <h3 className="text-xl font-semibold mb-2 text-white break-words">{item.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-white break-words">{item.title[lang]}</h3>
                     <p className="text-gray-300 break-words overflow-hidden">{item.etablissement}</p>
                     <p className="text-sm text-gray-400">{item.dates}</p>
                   </div>
