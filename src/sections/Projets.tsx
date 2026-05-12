@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, Download } from "lucide-react";
 import { projects, switches } from "../data/projects";
 import { useState } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Projets() {
+  const { lang, t } = useLanguage();
   const [selectedCategories, setSelectedCategories] = useState<string[]>([
     "all",
   ]);
@@ -44,7 +46,7 @@ export default function Projets() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold mb-12 text-center text-white">
-          Mes Projets
+          {t.projets.sectionTitle}
         </h2>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -69,7 +71,7 @@ export default function Projets() {
                   className="w-5 h-5 object-contain"
                 />
               )}
-              {category.label === "all" ? "Tous" : category.label}
+              {category.label === "all" ? t.projets.all : category.label}
             </motion.button>
           ))}
         </div>
@@ -118,7 +120,7 @@ export default function Projets() {
                     {project.title}
                   </h3>
                   <p className="text-gray-300 mb-6 leading-relaxed break-words">
-                    {project.description}
+                    {project.description[lang]}
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -142,7 +144,7 @@ export default function Projets() {
                         whileHover={{ scale: 1.05 }}
                       >
                         <Github className="w-5 h-5" />
-                        <span className="font-medium">Voir le code</span>
+                        <span className="font-medium">{t.projets.viewCode}</span>
                       </motion.a>
                     ) : (
                       <motion.a className="invisible">
@@ -159,7 +161,7 @@ export default function Projets() {
                         whileHover={{ scale: 1.05 }}
                       >
                         <Download className="w-5 h-5" />
-                        <span className="font-medium">Télécharger</span>
+                        <span className="font-medium">{t.projets.download}</span>
                       </motion.a>
                     ) : project.demo ? (
                       <motion.a
@@ -170,7 +172,7 @@ export default function Projets() {
                         whileHover={{ scale: 1.05 }}
                       >
                         <ExternalLink className="w-5 h-5" />
-                        <span className="font-medium">Voir le projet</span>
+                        <span className="font-medium">{t.projets.viewProject}</span>
                       </motion.a>
                     ) : null}
                   </div>

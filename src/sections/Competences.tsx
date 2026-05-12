@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Competences() {
+  const { t } = useLanguage();
   const skills = [
     "Godot",
     "Blender",
@@ -31,7 +33,7 @@ export default function Competences() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold mb-12 text-center text-white">
-          Mes Compétences
+          {t.competences.sectionTitle}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
