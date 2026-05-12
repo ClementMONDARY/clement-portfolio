@@ -113,7 +113,7 @@ export default function ExperiencesFormations() {
                   <p className="text-sm text-gray-400">{item.period}</p>
 
                   <div className="flex flex-wrap gap-2 mt-4">
-                    {item.tags.map((tag, tagIndex) => (
+                    {item.tags[lang].map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
                         className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium border border-white/30 shadow-md"

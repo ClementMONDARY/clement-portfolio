@@ -124,7 +124,7 @@ export default function Projets() {
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, tagIndex) => (
+                    {project.tags[lang].map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
                         className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium"

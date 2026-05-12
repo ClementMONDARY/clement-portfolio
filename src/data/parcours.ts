@@ -1,4 +1,12 @@
 export const parcours = [
+    {
+    title: {
+      fr: "Mastère Game Programming - Post Bachelor",
+      en: "Mastere's in Game Programming - Post Bachelor",
+    },
+    etablissement: "ICAN",
+    dates: "Planned for 2026 - 2028",
+  },
   {
     title: {
       fr: "Bachelor Architecte en logiciels performants et sécurisés (niv 6)",
