@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { Briefcase, GraduationCap } from "lucide-react";
 import { experiences } from "../data/experiences";
 import { formations } from "../data/formations";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function ExperiencesFormations() {
+  const { lang, t } = useLanguage();
   const [showExperiences, setShowExperiences] = useState(true);
 
   return (
@@ -21,7 +23,7 @@ export default function ExperiencesFormations() {
       >
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-3xl font-bold mb-8 text-center text-white">
-            {showExperiences ? "Mes Expériences" : "Mes Formations"}
+            {showExperiences ? t.experiences.sectionTitle : t.experiences.formationsTitle}
           </h2>
 
           {/* Toggle Switch */}
@@ -37,7 +39,7 @@ export default function ExperiencesFormations() {
               whileTap={{ scale: 0.95 }}
             >
               <Briefcase className="w-5 h-5" />
-              <span className="font-medium">Expériences</span>
+              <span className="font-medium">{t.experiences.experiencesBtn}</span>
             </motion.button>
             <motion.button
               onClick={() => setShowExperiences(false)}
@@ -50,7 +52,7 @@ export default function ExperiencesFormations() {
               whileTap={{ scale: 0.95 }}
             >
               <GraduationCap className="w-5 h-5" />
-              <span className="font-medium">Formations</span>
+              <span className="font-medium">{t.experiences.formationsBtn}</span>
             </motion.button>
           </div>
         </div>
@@ -103,7 +105,7 @@ export default function ExperiencesFormations() {
                 {/* Texte et tags */}
                 <div className="w-full md:w-2/3 p-4 md:p-6">
                   <h3 className="text-xl font-bold mb-2 text-white">
-                    {item.title}
+                    {item.title[lang]}
                   </h3>
                   <p className="text-gray-300 mb-1">
                     {showExperiences ? item.company : item.school}
@@ -111,7 +113,7 @@ export default function ExperiencesFormations() {
                   <p className="text-sm text-gray-400">{item.period}</p>
 
                   <div className="flex flex-wrap gap-2 mt-4">
-                    {item.tags.map((tag, tagIndex) => (
+                    {item.tags[lang].map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
                         className="px-3 py-1 bg-blue-900 text-blue-100 rounded-full text-sm font-medium border border-white/30 shadow-md"

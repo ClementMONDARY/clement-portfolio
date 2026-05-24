@@ -1,15 +1,18 @@
 import { motion } from 'framer-motion';
 import { User, GraduationCap, Briefcase, Code, FolderKanban } from 'lucide-react';
-
-const navItems = [
-  { icon: User, label: 'Présentation', href: '#presentation' },
-  { icon: GraduationCap, label: 'Parcours', href: '#parcours' },
-  { icon: Briefcase, label: 'Expériences', href: '#experiences' },
-  { icon: Code, label: 'Compétences', href: '#competences' },
-  { icon: FolderKanban, label: 'Projets', href: '#projets' }
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Navbar() {
+  const { t } = useLanguage();
+
+  const navItems = [
+    { icon: User, label: t.nav.presentation, href: '#presentation' },
+    { icon: GraduationCap, label: t.nav.parcours, href: '#parcours' },
+    { icon: Briefcase, label: t.nav.experiences, href: '#experiences' },
+    { icon: Code, label: t.nav.competences, href: '#competences' },
+    { icon: FolderKanban, label: t.nav.projets, href: '#projets' },
+  ];
+
   return (
     <div className="flex justify-center fixed z-50 w-full md:w-[108px] md:left-4 md:top-1/2 md:-translate-y-1/3 bottom-5">
       <motion.nav
