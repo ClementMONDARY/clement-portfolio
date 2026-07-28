@@ -1,20 +1,5 @@
 export const projects = [
   {
-    title: "Runner",
-    description: {
-      fr: "Un programme Rust qui utilise la techonlogie de rayscating pour générer un terrain de jeu en 3D (à la Doom/Wolfenstein). Le joueur peut se déplacer dans la carte et changer sa FOV. Si vous voulez l'essayer, il vous suffit de télécharger le fichier exécutable ci-dessous (Z/Q/S/D pour se déplacer, ←/→ pour tourner, A/E pour modifier la FOV, ↓ pour reset la FOV).",
-      en: "A Rust program using raycasting technology to generate a 3D game environment (Doom/Wolfenstein style). The player can navigate the map and adjust their FOV. To try it, just download the executable below (Z/Q/S/D to move, ←/→ to rotate, A/E to adjust FOV, ↓ to reset FOV).",
-    },
-    image: "runner.gif",
-    tags: {
-      fr: ["Rust", "Raycasting", "DDA", "Texturing"],
-      en: ["Rust", "Raycasting", "DDA", "Texturing"],
-    },
-    github: "https://github.com/ClementMONDARY/runner",
-    exec: "runner.exe",
-    category: ["Rust"],
-  },
-  {
     title: "Grav Rush",
     description: {
       fr: "Un prototype de jeu de plateforme 2D. Il est encore en développement, mais il est jouable. Mon projet le plus ambitieux à ce jour. La partie la plus amusante à été le Level Design et le développement du systeme de mouvement.",
@@ -25,9 +10,38 @@ export const projects = [
       fr: ["Godot", "GDScript", "2D", "Platformer", "Animation", "Sound Design", "Level Design", "Shaders"],
       en: ["Godot", "GDScript", "2D", "Platformer", "Animation", "Sound Design", "Level Design", "Shaders"],
     },
-    github: "https://github.com/ClementMONDARY/grav_rush",
-    demo: "https://nemeco.itch.io/grav-rush",
+    github: ["https://github.com/ClementMONDARY/grav_rush"],
+    demo: ["https://nemeco.itch.io/grav-rush"],
     category: ["Godot"],
+  },
+  {
+    title: "Application Communautaire BDJ",
+    description: {
+      fr: "Mon projet de fin de Bachelor pour le titre de \"Concepteur Développeur d'Applications\". Une application sous React Native qui consomme une API maison, qui à pour objectif se rassembler les fontionnalités communautaires de l'association étudiante de mon école.",
+      en: "A showcase website for the signage company 'M-Signalétique'. As the sole developer, I built the site from scratch. The site is responsive and uses animations to enhance the user experience.",
+    },
+    image: "app_bdj.gif",
+    tags: {
+      fr: ["React Native", "Expo", "API", "Fastify", "TypeScript", "Zod", "PostgreSQL", "Docker"],
+      en: ["React Native", "Expo", "API", "Fastify", "TypeScript", "Zod", "PostgreSQL", "Docker"],
+    },
+    github: ["https://github.com/ClementMONDARY/App_BDJ"],
+    category: ["Web"],
+  },
+  {
+    title: "Runner",
+    description: {
+      fr: "Un programme Rust qui utilise la techonlogie de rayscating pour générer un terrain de jeu en 3D (à la Doom/Wolfenstein). Le joueur peut se déplacer dans la carte et changer sa FOV. Si vous voulez l'essayer, il vous suffit de télécharger le fichier exécutable ci-dessous (Z/Q/S/D pour se déplacer, ←/→ pour tourner, A/E pour modifier la FOV, ↓ pour reset la FOV).",
+      en: "A Rust program using raycasting technology to generate a 3D game environment (Doom/Wolfenstein style). The player can navigate the map and adjust their FOV. To try it, just download the executable below (Z/Q/S/D to move, ←/→ to rotate, A/E to adjust FOV, ↓ to reset FOV).",
+    },
+    image: "runner.gif",
+    tags: {
+      fr: ["Rust", "Raycasting", "DDA", "Texturing"],
+      en: ["Rust", "Raycasting", "DDA", "Texturing"],
+    },
+    github: ["https://github.com/ClementMONDARY/runner"],
+    exec: "runner.exe",
+    category: ["Rust"],
   },
   {
     title: "Gulag",
@@ -40,8 +54,8 @@ export const projects = [
       fr: ["Godot", "GDScript", "3D", "FPS", "Animation", "Sound Design", "UI", "Pathfinding", "Shaders"],
       en: ["Godot", "GDScript", "3D", "FPS", "Animation", "Sound Design", "UI", "Pathfinding", "Shaders"],
     },
-    github: "https://github.com/ClementMONDARY/gulag",
-    demo: "https://nemeco.itch.io/gulag",
+    github: ["https://github.com/ClementMONDARY/gulag"],
+    demo: ["https://nemeco.itch.io/gulag"],
     category: ["Godot"],
   },
   {
@@ -55,7 +69,7 @@ export const projects = [
       fr: ["React", "Vite", "Responsive", "Hébergement", "Formulaire", "Communication"],
       en: ["React", "Vite", "Responsive", "Hosting", "Form", "Communication"],
     },
-    demo: "https://m-signaletique.fr",
+    demo: ["https://m-signaletique.fr"],
     category: ["Web"],
   },
   {
@@ -69,7 +83,7 @@ export const projects = [
       fr: ["HTML", "CSS", "PHP", "XML", "Magento 2", "Google Maps API"],
       en: ["HTML", "CSS", "PHP", "XML", "Magento 2", "Google Maps API"],
     },
-    demo: "https://www.tresor-rachat-or.com",
+    demo: ["https://www.tresor-rachat-or.com"],
     category: ["Web"],
   },
   {
@@ -83,8 +97,8 @@ export const projects = [
       fr: ["Godot", "GDScript", "2D", "Machine à états", "Animation", "Sound Design", "UI", "Game Design", "Level Design"],
       en: ["Godot", "GDScript", "2D", "State Machine", "Animation", "Sound Design", "UI", "Game Design", "Level Design"],
     },
-    github: "https://github.com/ClementMONDARY/Tree-and-Inventory",
-    demo: "https://nemeco.itch.io/tree-and-inventory",
+    github: ["https://github.com/ClementMONDARY/Tree-and-Inventory"],
+    demo: ["https://nemeco.itch.io/tree-and-inventory"],
     category: ["Godot"],
   },
   {

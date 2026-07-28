@@ -100,13 +100,13 @@ export default function Projets() {
 
               <div className="flex items-center flex-col md:flex-row relative z-10">
                 {/* Container de l'image avec hauteur fixe et overflow hidden */}
-                <div className="w-full md:w-2/5 h-[300px] overflow-hidden">
+                <div className="w-full md:w-2/5 h-[300px] overflow-hidden bg-black/20 flex items-center justify-center">
                   <img
                     src={`././${
                       import.meta.env.BASE_URL
                     }/assets/images/projets/${project.image}`}
                     alt={project.title}
-                    className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 transform ${
+                    className={`w-full h-full object-contain transition-transform duration-300 hover:scale-105 transform ${
                       index % 2 === 0
                         ? "-translate-x-[8px]"
                         : "translate-x-[8px]"
