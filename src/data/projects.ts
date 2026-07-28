@@ -25,7 +25,7 @@ export const projects = [
       fr: ["React Native", "Expo", "API", "Fastify", "TypeScript", "Zod", "PostgreSQL", "Docker"],
       en: ["React Native", "Expo", "API", "Fastify", "TypeScript", "Zod", "PostgreSQL", "Docker"],
     },
-    github: ["https://github.com/ClementMONDARY/App_BDJ"],
+    github: ["https://github.com/ClementMONDARY/App_BDJ", "https://github.com/ClementMONDARY/App_BDJ-back"],
     category: ["Web"],
   },
   {
@@ -112,8 +112,8 @@ export const projects = [
       fr: ["HTML", "CSS", "JavaScript", "Insomnia", "API"],
       en: ["HTML", "CSS", "JavaScript", "Insomnia", "API"],
     },
-    github: "https://github.com/ClementMONDARY/LoL_Website",
-    demo: "https://clementmondary.github.io/LoL_Website/",
+    github: ["https://github.com/ClementMONDARY/LoL_Website"],
+    demo: ["https://clementmondary.github.io/LoL_Website/"],
     category: ["Web"],
   },
   {
@@ -127,7 +127,7 @@ export const projects = [
       fr: ["HTML", "CSS", "JavaScript", "XML", "Magento 2", "Google Maps API"],
       en: ["HTML", "CSS", "JavaScript", "XML", "Magento 2", "Google Maps API"],
     },
-    demo: "https://www.tresor-bijoux.fr",
+    demo: ["https://www.tresor-bijoux.fr"],
     category: ["Web"],
   },
   {
@@ -141,7 +141,7 @@ export const projects = [
       fr: ["C", "Algorithme", "Récursion"],
       en: ["C", "Algorithm", "Recursion"],
     },
-    github: "https://github.com/ClementMONDARY/maze",
+    github: ["https://github.com/ClementMONDARY/maze"],
     category: ["C"],
   },
   {
@@ -155,7 +155,7 @@ export const projects = [
       fr: ["Rust", "WinitHandler"],
       en: ["Rust", "WinitHandler"],
     },
-    github: "https://github.com/ClementMONDARY/windraw",
+    github: ["https://github.com/ClementMONDARY/windraw"],
     category: ["Rust"],
   },
 ];

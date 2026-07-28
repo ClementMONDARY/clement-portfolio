@@ -135,17 +135,20 @@ export default function Projets() {
                   </div>
 
                   <div className="flex flex-wrap gap-4 justify-between">
-                    {project.github ? (
-                      <motion.a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {project.github && project.github.length > 0 ? (
+                      <motion.button
+                        type="button"
+                        onClick={() =>
+                          project.github!.forEach((url) =>
+                            window.open(url, "_blank", "noopener,noreferrer")
+                          )
+                        }
                         className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
                         whileHover={{ scale: 1.05 }}
                       >
                         <Github className="w-5 h-5" />
                         <span className="font-medium">{t.projets.viewCode}</span>
-                      </motion.a>
+                      </motion.button>
                     ) : (
                       <motion.a className="invisible">
                         <span></span>
@@ -163,17 +166,20 @@ export default function Projets() {
                         <Download className="w-5 h-5" />
                         <span className="font-medium">{t.projets.download}</span>
                       </motion.a>
-                    ) : project.demo ? (
-                      <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    ) : project.demo && project.demo.length > 0 ? (
+                      <motion.button
+                        type="button"
+                        onClick={() =>
+                          project.demo!.forEach((url) =>
+                            window.open(url, "_blank", "noopener,noreferrer")
+                          )
+                        }
                         className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"
                         whileHover={{ scale: 1.05 }}
                       >
                         <ExternalLink className="w-5 h-5" />
                         <span className="font-medium">{t.projets.viewProject}</span>
-                      </motion.a>
+                      </motion.button>
                     ) : null}
                   </div>
                 </div>
